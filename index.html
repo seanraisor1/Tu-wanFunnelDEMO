@@ -7,13 +7,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #0c0e19;
-      --bg-dark: #090a13;
+      --bg: #0b0f1a;
       --text: #ffffff;
       --muted: #9ba3af;
       --accent: #00ffd0;
-      --card: #1c1f2e;
-      --highlight: #23263a;
+      --card: #171c2b;
+      --highlight: #1f2435;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -30,26 +29,38 @@
     }
 
     header {
-      background: linear-gradient(to bottom, #10131f, #0c0e19);
-      text-align: center;
-      padding: 100px 20px 80px;
-      background-image: url('https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?auto=format&fit=crop&w=1600&q=80');
+      background-image: url('https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1600&q=80');
       background-size: cover;
       background-position: center;
+      padding: 100px 20px 80px;
+      text-align: center;
+      position: relative;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    header * {
+      position: relative;
+      z-index: 2;
     }
 
     header h1 {
       font-size: 48px;
       font-weight: 800;
       margin-bottom: 20px;
-      text-shadow: 0 2px 10px #000;
+      text-shadow: 0 3px 10px #000;
     }
 
     header p {
-      max-width: 680px;
-      margin: 0 auto 30px;
       font-size: 20px;
       color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto 30px;
       text-shadow: 0 2px 8px #000;
     }
 
@@ -61,7 +72,7 @@
     }
 
     .btn {
-      padding: 14px 32px;
+      padding: 14px 28px;
       border-radius: 8px;
       font-weight: 600;
       min-width: 180px;
@@ -116,9 +127,15 @@
       box-shadow: 0 0 0 1px #2a2d3e;
     }
 
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+
     .card h3 {
       font-size: 20px;
-      margin: 16px 0 12px;
+      margin-bottom: 12px;
     }
 
     .card p {
@@ -170,7 +187,6 @@
       background: var(--highlight);
       padding: 28px;
       border-radius: 16px;
-      font-size: 16px;
     }
 
     .testimonial p {
@@ -188,6 +204,14 @@
       padding: 60px 20px 40px;
       color: var(--muted);
       font-size: 14px;
+    }
+
+    .disclaimer {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 60px;
+      text-align: center;
+      padding: 0 20px;
     }
 
     @media (max-width: 600px) {
@@ -215,14 +239,17 @@
     <h2 class="section-title">What You’ll Get</h2>
     <div class="features">
       <div class="card">
+        <img src="https://images.unsplash.com/photo-1583454110551-21c1ee49b564?auto=format&fit=crop&w=800&q=80" alt="Black male lifting weights">
         <h3>Customized Training Plan</h3>
         <p>Built for your fitness level, schedule, and goals — no cookie-cutter PDFs or templates.</p>
       </div>
       <div class="card">
+        <img src="https://images.unsplash.com/photo-1579758629936-3223b3f5f8e1?auto=format&fit=crop&w=800&q=80" alt="Strength">
         <h3>Faith-Based Coaching</h3>
         <p>Scripture-backed mindset coaching with weekly challenges to strengthen your body and walk with God.</p>
       </div>
       <div class="card">
+        <img src="https://images.unsplash.com/photo-1627483256130-418ed7b8b1e2?auto=format&fit=crop&w=800&q=80" alt="Black bodybuilder arms">
         <h3>Nutrition & Accountability</h3>
         <p>Simple meal frameworks and private chat support with Tu’Wan so you’re never doing this alone.</p>
       </div>
@@ -261,6 +288,10 @@
       </div>
     </div>
   </section>
+
+  <div class="disclaimer">
+    ⚠️ This is a demo site for presentation purposes only. Backend integrations like payments, automation, and chatbot are not active.
+  </div>
 
   <footer>
     © 2025 Coach Tu'Wan. Built with purpose.
