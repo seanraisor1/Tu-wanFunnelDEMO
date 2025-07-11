@@ -1,270 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Coach Tu'Wan – Faith-Powered Fitness</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coach Tu'Wan | Faith-Driven Fitness Coaching</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
-    :root {
-      --bg: #0c0e19;
-      --bg-dark: #090a13;
-      --text: #ffffff;
-      --muted: #9ba3af;
-      --accent: #00ffd0;
-      --card: #1c1f2e;
-      --highlight: #23263a;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
       font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      color: #fff;
+      background-color: #0a0f1c;
+      scroll-behavior: smooth;
     }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    header {
-      background: linear-gradient(to bottom, #10131f, #0c0e19);
-      text-align: center;
-      padding: 100px 20px 80px;
-      background-image: url('https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?auto=format&fit=crop&w=1600&q=80');
-      background-size: cover;
-      background-position: center;
-    }
-
-    header h1 {
-      font-size: 48px;
-      font-weight: 800;
-      margin-bottom: 20px;
-      text-shadow: 0 2px 10px #000;
-    }
-
-    header p {
-      max-width: 680px;
-      margin: 0 auto 30px;
-      font-size: 20px;
-      color: var(--muted);
-      text-shadow: 0 2px 8px #000;
-    }
-
-    .buttons {
+    .hero {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.95)),
+                  url('https://raw.githubusercontent.com/seanraisor1/CoachTuwanKingPayton/main/tuwan-hero.jpg') center center/cover no-repeat;
+      height: 100vh;
       display: flex;
+      align-items: center;
       justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
+      text-align: center;
+      padding: 0 2rem;
     }
-
-    .btn {
-      padding: 14px 32px;
-      border-radius: 8px;
+    .hero h1 {
+      font-size: 2.8rem;
+      line-height: 1.2;
+      max-width: 700px;
+    }
+    .hero p {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #c4c4c4;
+      max-width: 600px;
+    }
+    .cta-buttons {
+      margin-top: 2rem;
+    }
+    .cta-buttons a {
+      display: inline-block;
+      background: #666;
+      padding: 0.9rem 1.5rem;
+      color: white;
       font-weight: 600;
-      min-width: 180px;
-      text-align: center;
-      transition: 0.3s;
-      font-size: 16px;
+      text-decoration: none;
+      border-radius: 8px;
+      margin: 0 0.5rem;
+      transition: background 0.3s;
     }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #000;
+    .cta-buttons a:hover {
+      background: #999;
     }
-
-    .btn-primary:hover {
-      background: #00e6ba;
+    header {
+      position:fixed;
+      top:0;
+      width:100%;
+      background:#0a0f1c;
+      z-index:1000;
+      padding:1rem 2rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      border-bottom:1px solid #1a1a2e;
     }
-
-    .btn-outline {
-      border: 1px solid var(--muted);
-      color: var(--muted);
+    header h2 {
+      color:#ccc;
+      font-size:1.4rem;
     }
-
-    .btn-outline:hover {
-      color: var(--text);
-      border-color: var(--text);
+    header nav a {
+      color:#fff;
+      margin:0 1rem;
+      text-decoration:none;
+      font-weight: 500;
     }
-
     section {
-      padding: 80px 20px;
-      max-width: 1100px;
-      margin: 0 auto;
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
     }
-
-    .section-title {
-      font-size: 32px;
-      text-align: center;
-      font-weight: 700;
-      margin-bottom: 48px;
-    }
-
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 32px;
+      gap: 2rem;
+      margin-top: 2rem;
     }
-
-    .card {
-      background: var(--card);
-      padding: 32px;
-      border-radius: 16px;
-      text-align: center;
-      box-shadow: 0 0 0 1px #2a2d3e;
-    }
-
-    .card h3 {
-      font-size: 20px;
-      margin: 16px 0 12px;
-    }
-
-    .card p {
-      font-size: 16px;
-      color: var(--muted);
-    }
-
-    .pricing {
+    .feature {
+      background: #11182a;
+      border-radius: 10px;
+      padding: 2rem;
       text-align: center;
     }
-
-    .price-box {
-      background: var(--card);
-      padding: 48px;
-      border-radius: 20px;
-      display: inline-block;
-      margin-top: 20px;
-      box-shadow: 0 0 0 1px #2a2d3e;
+    .feature h3 {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
     }
-
-    .price-box h3 {
-      font-size: 24px;
-      margin-bottom: 10px;
+        }
+    .pricing-box {
+      background: #11182a;
+      padding: 2.5rem;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 400px;
+      margin: 2rem auto;
     }
-
-    .price {
-      font-size: 42px;
-      font-weight: 800;
-      margin: 16px 0;
-      color: var(--accent);
+    .pricing-box h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
     }
-
-    .price-box ul {
+    .pricing-box ul {
       list-style: none;
+      margin-top: 1.5rem;
       padding: 0;
-      margin-bottom: 32px;
-      color: var(--muted);
-      font-size: 16px;
-      line-height: 1.8;
     }
-
-    .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 32px;
+    .pricing-box ul li {
+      margin-bottom: 1rem;
     }
-
-    .testimonial {
-      background: var(--highlight);
-      padding: 28px;
-      border-radius: 16px;
-      font-size: 16px;
-    }
-
-    .testimonial p {
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
-
-    .testimonial strong {
-      color: var(--text);
+    .pricing-box a {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.9rem 2rem;
+      background: #666;
+      color: #fff;
       font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
     }
-
-    footer {
-      text-align: center;
-      padding: 60px 20px 40px;
-      color: var(--muted);
-      font-size: 14px;
+    #faq {
+      background: #0f1525;
     }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 32px;
-      }
-      .section-title {
-        font-size: 26px;
-      }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .cta-buttons { display: flex; flex-direction: column; }
+      .cta-buttons a { margin: 0.5rem 0; }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Faith. Strength. Transformation.</h1>
-    <p>Coach Tu’Wan helps you transform physically & spiritually — with a plan tailored to your walk and your goals.</p>
-    <div class="buttons">
-      <a href="https://calendly.com/demo-strategy-call" class="btn btn-primary">Book Strategy Call</a>
-      <a href="https://buy.stripe.com/6oUcN6bKG0THfHhdyUcZa00" class="btn btn-outline">Join Now</a>
-    </div>
+    <h2>Coach Tu'Wan</h2>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
+  <div style="height:80px;"></div>
 
+  <section class="hero" id="about">
+    <div>
+      <h1>Faith-Driven Fitness Coaching with Coach Tu'Wan</h1>
+      <p>Transform your body and mindset with training rooted in discipline, faith, and consistency. For men ready to lead from the front.</p>
+      <div class="cta-buttons">
+        <a href="https://calendly.com/seanmnr20/30min" target="_blank">Book Strategy Call</a>
+        <a href="https://buy.stripe.com/6oUcN6bKG0THfHhdyUcZa00" target="_blank">Join Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What You Get -->
   <section>
-    <h2 class="section-title">What You’ll Get</h2>
+    <h2 style="text-align:center; font-size:2rem;">What You Get</h2>
     <div class="features">
-      <div class="card">
-        <h3>Customized Training Plan</h3>
-        <p>Built for your fitness level, schedule, and goals — no cookie-cutter PDFs or templates.</p>
+      <div class="feature" data-aos="fade-up">
+        <h3>Customized Training</h3>
+        <p>Workouts tailored to your schedule and goals – updated weekly to keep results moving forward.</p>
       </div>
-      <div class="card">
+      <div class="feature" data-aos="fade-up" data-aos-delay="100">
         <h3>Faith-Based Coaching</h3>
-        <p>Scripture-backed mindset coaching with weekly challenges to strengthen your body and walk with God.</p>
+        <p>Tu'Wan blends spiritual strength with fitness discipline to help you grow inside and out.</p>
       </div>
-      <div class="card">
-        <h3>Nutrition & Accountability</h3>
-        <p>Simple meal frameworks and private chat support with Tu’Wan so you’re never doing this alone.</p>
+      <div class="feature" data-aos="fade-up" data-aos-delay="200">
+        <h3>Nutrition & Support</h3>
+        <p>Custom meal guidance + daily check-ins. Stay accountable and on track every week.</p>
       </div>
     </div>
   </section>
 
-  <section class="pricing">
-    <h2 class="section-title">Simple Coaching Plan</h2>
-    <div class="price-box">
-      <h3>Online Coaching</h3>
-      <p class="price">$250/mo</p>
-      <ul>
-        <li>✓ Weekly Check-ins & Goal Review</li>
-        <li>✓ Tailored Training & Meal Plan</li>
-        <li>✓ Scripture-led Accountability</li>
-        <li>✓ 1-on-1 Chat Access with Tu’Wan</li>
-      </ul>
-      <a href="https://buy.stripe.com/6oUcN6bKG0THfHhdyUcZa00" class="btn btn-primary">Join Coaching</a>
-    </div>
-  </section>
-
+  <!-- Pricing -->
   <section>
-    <h2 class="section-title">What Clients Are Saying</h2>
-    <div class="testimonials">
-      <div class="testimonial">
-        <p>“Tu’Wan didn’t just help me get fit — he helped me find direction again. This is the most consistent I’ve ever been.”</p>
-        <strong>— Jalen R.</strong>
+    <div class="pricing-box" data-aos="zoom-in">
+      <h2>1-on-1 Coaching</h2>
+      <p style="font-size:1.2rem;">$250/month</p>
+      <ul>
+        <li>✅ Weekly Check-ins</li>
+        <li>✅ Personalized Workouts</li>
+        <li>✅ Flexible Nutrition Help</li>
+      </ul>
+      <a href="https://buy.stripe.com/6oUcN6bKG0THfHhdyUcZa00" target="_blank">Join Coaching</a>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" style="background:#0f1525; padding: 4rem 2rem;">
+    <h2 style="text-align:center; font-size:2rem; margin-bottom: 2rem;">What Real Clients Say</h2>
+    <div class="features">
+      <div class="feature" data-aos="fade-up">
+        <h3>Mike R. – Lost 30lbs</h3>
+        <p>"Tu'Wan helped me drop 30 pounds in 12 weeks. I’ve never felt more in control of my life. This wasn’t just about the body, it was about becoming a man of discipline."</p>
       </div>
-      <div class="testimonial">
-        <p>“I went from insecure and scattered to grounded, focused, and strong — inside and out.”</p>
-        <strong>— Anita C.</strong>
+      <div class="feature" data-aos="fade-up" data-aos-delay="100">
+        <h3>James B. – Busy Father</h3>
+        <p>"I used to work 12-hour shifts and couldn’t stay consistent. With Coach Tu’Wan, I now have a system that works. Daily check-ins kept me locked in and progressing."</p>
       </div>
-      <div class="testimonial">
-        <p>“This isn’t just fitness. This is transformation. God used this coaching to realign my whole life.”</p>
-        <strong>— Marcus B.</strong>
+      <div class="feature" data-aos="fade-up" data-aos-delay="200">
+        <h3>Derrick S. – Mental Reset</h3>
+        <p>"What stood out to me was the spiritual mindset approach. I didn’t just get stronger — I became a better leader, father, and man. This program saved my life."</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="300">
+        <h3>Travis K. – Entrepreneur</h3>
+        <p>"Running a business had me burnt out. Tu’Wan’s program brought back structure and confidence. My energy is up, I’m locked in, and I’m performing better in all areas."</p>
       </div>
     </div>
   </section>
 
-  <footer>
-    © 2025 Coach Tu'Wan. Built with purpose.
+  <!-- Results -->
+  <section style="background:#0a0f1c;">
+    <h2 style="text-align:center; font-size:2rem;">Results That Speak</h2>
+    <div class="features">
+      <div class="feature"><h3><span id="clients">0</span>+ Men Coached</h3></div>
+      <div class="feature"><h3><span id="pounds">0</span> lbs Lost</h3></div>
+      <div class="feature"><h3><span id="mindsets">0</span> Mindsets Rebuilt</h3></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <h2 style="text-align:center; font-size:2rem;">Frequently Asked Questions</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Do I need a gym membership?</h3>
+        <p>Nope. Your plan is built around your current lifestyle. Home or gym, we make it work.</p>
+      </div>
+      <div class="feature">
+        <h3>Can I cancel anytime?</h3>
+        <p>Yes. No contracts, no pressure. You can cancel or pause coaching any time.</p>
+      </div>
+      <div class="feature">
+        <h3>Is this for beginners?</h3>
+        <p>Absolutely. Whether you're new or advanced, the plan is custom-built for you.</p>
+      </div>
+    </div>
+  </section>
+    <!-- AI Chatbot -->
+  <section style="background:#11182a;">
+    <h2 style="text-align:center; font-size:2rem;">Ask The AI Assistant</h2>
+    <p style="text-align:center; color:#c4c4c4; margin: 0 auto; max-width: 600px;">
+      Have questions about training, nutrition, or booking? Our assistant can help — 24/7.
+    </p>
+    <div style="margin-top:2rem; display:flex; justify-content:center;">
+      <iframe src="https://frontenddialed.com/chatbot-demo" width="100%" height="500px" style="border: none; border-radius: 10px; max-width: 900px;"></iframe>
+    </div>
+  </section>
+
+  <!-- Newsletter Opt-in -->
+  <section id="contact" style="background:#11182a; padding:4rem 2rem;">
+    <h2 style="text-align:center; font-size:2rem;">Stay Connected</h2>
+    <p style="text-align:center; color:#c4c4c4;">Get exclusive fitness tips, mindset strategies, and coaching updates from Coach Tu’Wan.</p>
+    <form style="margin:2rem auto; max-width:400px; text-align:center;">
+      <input type="email" placeholder="Enter your email" required style="padding:0.8rem; width:100%; border-radius:6px; border:none; margin-bottom:1rem;">
+      <button type="submit" style="padding:0.9rem 2rem; background:#666; color:white; font-weight:600; border:none; border-radius:6px;">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer style="margin-top: 2rem; background:#0a0f1c; text-align:center; padding:2rem; color:#888;">
+    <p>Contact: <a href="mailto:seanmnr20@gmail.com" style="color: #999;">seanmnr20@gmail.com</a></p>
+    <p style="margin-top: 0.5rem;">&copy; 2025 Coach Tu'Wan. Funnel built by FrontendDialed.</p>
   </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function animateValue(id, start, end, duration) {
+      let obj = document.getElementById(id);
+      let range = end - start;
+      let stepTime = Math.abs(Math.floor(duration / range));
+      let current = start;
+      let increment = end > start ? 1 : -1;
+      let timer = setInterval(() => {
+        current += increment;
+        obj.textContent = current;
+        if (current == end) clearInterval(timer);
+      }, stepTime);
+    }
+    window.addEventListener('load', () => {
+      animateValue("clients", 0, 150, 2000);
+      animateValue("pounds", 0, 1800, 2500);
+      animateValue("mindsets", 0, 300, 2200);
+    });
+  </script>
 
 </body>
 </html>
