@@ -1,1 +1,243 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coach Tu'Wan – Faith-Based Fitness Coaching</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0e101c;
+      --accent: #4fd1c5;
+      --text: #ffffff;
+      --muted: #9fa6b2;
+      --card-bg: #1c1f2e;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      padding: 120px 20px 80px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      background: rgba(0,0,0,0.6);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    header p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      min-width: 180px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #000;
+    }
+
+    .btn-primary:hover { background: #38b2ac; }
+
+    .btn-outline {
+      border: 1px solid var(--muted);
+      color: var(--muted);
+    }
+
+    .btn-outline:hover {
+      color: var(--text);
+      border-color: var(--text);
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 24px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      margin: 16px 0 10px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .pricing {
+      text-align: center;
+    }
+
+    .price-box {
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 16px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .price-box h3 { font-size: 24px; margin-bottom: 10px; }
+    .price { font-size: 36px; margin: 16px 0; }
+
+    .price-box ul {
+      list-style: none;
+      padding: 0;
+      color: var(--muted);
+      margin-bottom: 30px;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .testimonials .testimonial {
+      background: var(--card-bg);
+      padding: 24px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .testimonial p {
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    .testimonial strong {
+      display: block;
+      margin-top: 12px;
+      color: var(--text);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 30px; }
+      .price { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Faith-Driven Fitness Coaching with Coach Tu'Wan</h1>
+    <p>Transform your body and renew your mindset — with training built on discipline, faith, and consistency.</p>
+    <div class="buttons">
+      <a href="https://calendly.com/demo-strategy-call" class="btn btn-primary">Book Strategy Call</a>
+      <a href="https://buy.stripe.com/6oUcN6bKG0THfHhdyUcZa00" class="btn btn-outline">Join Now</a>
+    </div>
+  </header>
+
+  <section>
+    <h2 class="section-title">What You Get</h2>
+    <div class="features">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001ab?auto=format&fit=crop&w=800&q=80" alt="Muscle" />
+        <h3>Custom Training Plans</h3>
+        <p>Workouts tailored to your goals, schedule, and fitness level — updated weekly.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=800&q=80" alt="Nutrition" />
+        <h3>Nutrition & Support</h3>
+        <p>Flexible meal guidance and private support with daily access to Coach Tu’Wan.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1599058917212-d750089bcafc?auto=format&fit=crop&w=800&q=80" alt="Faith Coaching" />
+        <h3>Faith-Based Accountability</h3>
+        <p>1-on-1 coaching rooted in discipline and spiritual strength — inside and out.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing">
+    <h2 class="section-title">Transparent Pricing</h2>
+    <div class="price-box">
+      <h3>1-on-1 Coaching</h3>
+      <p class="price">$250/mo</p>
+      <ul>
+        <li>✓ Weekly check-ins & updates</li>
+        <li>✓ Personalized workouts</li>
+        <li>✓ Nutrition coaching</li>
+        <li>✓ Private access to Coach</li>
+      </ul>
+      <a href="https://buy.stripe.com/6oUcN6bKG0THfHhdyUcZa00" class="btn btn-primary">Join Coaching</a>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2 class="section-title">Client Wins</h2>
+    <div class="testimonial">
+      <p>“Coach Tu'Wan helped me drop 20 lbs and completely reset my habits — physically and spiritually.”</p>
+      <strong>— Michael R.</strong>
+    </div>
+    <div class="testimonial">
+      <p>“This coaching brought me discipline I never had. I’m locked in and seeing results I never thought possible.”</p>
+      <strong>— Lauren S.</strong>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Coach Tu'Wan. All rights reserved.
+  </footer>
+
+</body>
+</html>
