@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harrodshustle</title>
+    <title>Coach Tuwan King Payton - Faith, Mindset & Fitness</title>
     <style>
         /* Reset and base styles */
         * {
@@ -12,12 +12,38 @@
             box-sizing: border-box;
         }
 
+        /* Import hardcore fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Bebas+Neue&family=Anton&display=swap');
+
+        /* Global Background */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
+            font-family: 'Oswald', 'Impact', 'Arial Black', sans-serif;
+            line-height: 1.5;
             color: #333;
-            background-color: #fff;
+            background: url('https://raw.githubusercontent.com/seanraisor1/claudefitnessDEMO/main/Tuwan.jpg');
+            background-size: cover;
+            background-position: center top;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
             overflow-x: hidden;
+            min-height: 100vh;
+            font-weight: 400;
+        }
+
+        /* Responsive background positioning */
+        @media (max-width: 768px) {
+            body {
+                background-position: center top;
+                background-size: cover;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                background-position: center top;
+                background-size: auto 100vh;
+                background-attachment: scroll;
+            }
         }
 
         /* Header and Navigation */
@@ -64,44 +90,7 @@
         }
 
         .nav-links a:hover {
-            color: #007bff;
-        }
-
-        /* Global Background */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: url('https://raw.githubusercontent.com/seanraisor1/claudefitnessDEMO/main/Tuwan.jpg');
-            background-size: cover;
-            background-position: center top;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            overflow-x: hidden;
-            min-height: 100vh;
-        }
-
-        /* Responsive background positioning */
-        @media (max-width: 768px) {
-            body {
-                background-position: 35% top;
-                background-size: cover;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                background-position: 40% top;
-                background-size: auto 100vh;
-                background-attachment: scroll;
-            }
-        }
-
-        @media (orientation: landscape) and (max-height: 600px) {
-            body {
-                background-position: center 20%;
-                background-size: cover;
-            }
+            color: #d4af37;
         }
 
         /* Hero Section */
@@ -112,21 +101,10 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.4);
             color: white;
             position: relative;
             overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.1);
-            z-index: 1;
         }
 
         .hero-content {
@@ -137,42 +115,75 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
+            font-family: 'Bebas Neue', 'Anton', 'Impact', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 400;
             margin-bottom: 1rem;
-            line-height: 1.2;
-            letter-spacing: -1px;
+            line-height: 1.1;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             animation: fadeInUp 1s ease-out;
         }
 
+        .hero .subtitle {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #d4af37;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
         .hero p {
-            font-size: 1.25rem;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3rem;
             margin-bottom: 2rem;
             opacity: 0.9;
-            animation: fadeInUp 1s ease-out 0.2s both;
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1s ease-out 0.4s both;
         }
 
         .cta-button {
             display: inline-block;
-            background-color: #fff;
-            color: #333;
+            background-color: #d4af37;
+            color: #fff;
             padding: 1rem 2rem;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
             transition: all 0.3s ease;
-            animation: fadeInUp 1s ease-out 0.4s both;
+            animation: fadeInUp 1s ease-out 0.6s both;
+            margin: 0 0.5rem;
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+            background-color: #b8941f;
         }
 
-        /* Products Section */
-        .products {
+        .cta-secondary {
+            background-color: transparent;
+            border: 2px solid #d4af37;
+            color: #d4af37;
+        }
+
+        .cta-secondary:hover {
+            background-color: #d4af37;
+            color: #fff;
+        }
+
+        /* Services Section */
+        .services {
             padding: 5rem 0;
-            background-color: #f8f9fa;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
         }
 
         .container {
@@ -185,18 +196,28 @@
             text-align: center;
             font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
             color: #333;
         }
 
-        .products-grid {
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-bottom: 3rem;
         }
 
-        .product-card {
+        .service-card {
             background: white;
             border-radius: 15px;
             overflow: hidden;
@@ -204,81 +225,51 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .product-card:hover {
+        .service-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
 
-        .product-image {
+        .service-image {
             width: 100%;
             height: 200px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 600;
+            background-size: cover;
+            background-position: center;
         }
 
-        .product-info {
+        .muscle-image {
+            background-image: url('https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+        }
+
+        .nutrition-image {
+            background-image: url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+        }
+
+        .mindset-image {
+            background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+        }
+
+        .service-info {
             padding: 1.5rem;
         }
 
-        .product-title {
+        .service-title {
             font-size: 1.25rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
             color: #333;
         }
 
-        .product-price {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .sale-price {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #e74c3c;
-        }
-
-        .regular-price {
-            font-size: 0.9rem;
+        .service-description {
             color: #666;
-            text-decoration: line-through;
-        }
-
-        .sale-badge {
-            background-color: #e74c3c;
-            color: white;
-            padding: 0.25rem 0.5rem;
-            border-radius: 15px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-left: auto;
-        }
-
-        .product-link {
-            display: inline-block;
-            background-color: #007bff;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
-        }
-
-        .product-link:hover {
-            background-color: #0056b3;
+            margin-bottom: 1rem;
         }
 
         /* Coaching Section */
         .coaching {
             padding: 5rem 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: rgba(40, 40, 40, 0.9);
+            backdrop-filter: blur(10px);
             color: white;
         }
 
@@ -288,32 +279,23 @@
             text-align: center;
         }
 
-        .coaching-image {
-            width: 100%;
-            max-width: 600px;
-            height: 300px;
-            margin: 0 auto 2rem;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .coaching-placeholder {
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
         .coaching h2 {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
+        }
+
+        .coaching-price {
+            font-size: 3rem;
+            color: #d4af37;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .coaching-frequency {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 2rem;
         }
 
         .coaching-description {
@@ -342,28 +324,104 @@
             font-weight: 600;
             margin-bottom: 0.5rem;
             font-size: 1.1rem;
+            color: #d4af37;
         }
 
-        .coaching-cta {
-            background-color: #fff;
-            color: #333;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 50px;
+        /* Testimonials Section */
+        .testimonials {
+            padding: 5rem 0;
+            background-color: rgba(248, 249, 250, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .testimonial-author {
             font-weight: 600;
-            display: inline-block;
-            margin-top: 2rem;
+            color: #333;
+        }
+
+        .testimonial-title {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .stars {
+            color: #d4af37;
+            margin-bottom: 1rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 5rem 0;
+            background: rgba(40, 40, 40, 0.9);
+            backdrop-filter: blur(10px);
+            color: white;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
             transition: all 0.3s ease;
         }
 
-        .coaching-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        .faq-answer.active {
+            padding: 1.5rem;
+            max-height: 200px;
+        }
+
+        .faq-toggle {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-toggle.active {
+            transform: rotate(45deg);
         }
 
         /* Footer */
         .footer {
-            background-color: #333;
+            background-color: rgba(20, 20, 20, 0.95);
+            backdrop-filter: blur(10px);
             color: white;
             padding: 3rem 0 1rem;
             text-align: center;
@@ -389,7 +447,7 @@
         }
 
         .footer-links a:hover {
-            color: #fff;
+            color: #d4af37;
         }
 
         .copyright {
@@ -416,7 +474,12 @@
             }
 
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 3rem;
+                letter-spacing: 2px;
+            }
+
+            .hero .subtitle {
+                font-size: 1.4rem;
             }
 
             .hero p {
@@ -424,10 +487,11 @@
             }
 
             .section-title {
-                font-size: 2rem;
+                font-size: 2.5rem;
+                letter-spacing: 2px;
             }
 
-            .products-grid {
+            .services-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -435,9 +499,25 @@
                 grid-template-columns: 1fr;
             }
 
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
             .footer-links {
                 flex-direction: column;
                 gap: 1rem;
+            }
+
+            .cta-button {
+                display: block;
+                margin: 0.5rem auto;
+                text-align: center;
+                font-size: 1rem;
+                letter-spacing: 1px;
+            }
+
+            .coaching-price {
+                font-size: 3rem;
             }
         }
 
@@ -447,11 +527,20 @@
             }
 
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
+                letter-spacing: 1px;
             }
 
             .container {
                 padding: 0 1rem;
+            }
+
+            .coaching-price {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
             }
         }
 
@@ -472,12 +561,13 @@
     <!-- Header Navigation -->
     <header class="header">
         <nav class="nav-container">
-            <a href="#" class="logo">Harrodshustle</a>
+            <a href="#" class="logo">Coach Tuwan King Payton</a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#products">Programs</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#coaching">Coaching</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
         </nav>
     </header>
@@ -485,48 +575,46 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Build Beyond the Body</h1>
-            <p>Transform your fitness journey with personalized coaching and proven programs designed to help you achieve your goals.</p>
-            <a href="#coaching" class="cta-button">Start Your Journey</a>
+            <h1>Transform Your Body, Mind & Spirit</h1>
+            <p class="subtitle">Faith-Based Fitness & Mindset Coaching</p>
+            <p>Experience holistic transformation through fitness, nutrition, and spiritual growth. Build strength that goes beyond the physical.</p>
+            <div>
+                <a href="#coaching" class="cta-button">Book a Call</a>
+                <a href="#coaching" class="cta-button cta-secondary">Book Your Spot</a>
+            </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section class="products" id="products">
+    <!-- Services Section -->
+    <section class="services" id="services">
         <div class="container">
-            <h2 class="section-title fade-in">Training Programs</h2>
-            <div class="products-grid">
-                <!-- The Hustle Split Program -->
-                <div class="product-card fade-in">
-                    <div class="product-image">
-                        <img src="placeholder-program-1.jpg" alt="The Hustle Split Program" style="width: 100%; height: 100%; object-fit: cover; display: none;">
-                        <div class="coaching-placeholder">The Hustle Split Program</div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">The Hustle Split</h3>
-                        <div class="product-price">
-                            <span class="sale-price">224,00 DKK</span>
-                            <span class="regular-price">275,00 DKK</span>
-                            <span class="sale-badge">Sale</span>
-                        </div>
-                        <a href="#" class="product-link">Learn More</a>
+            <h2 class="section-title fade-in">Complete Transformation</h2>
+            <p class="section-subtitle fade-in">Faith, Fitness, and Mindset - The three pillars of lasting change</p>
+            <div class="services-grid">
+                <!-- Fitness Training -->
+                <div class="service-card fade-in">
+                    <div class="service-image muscle-image"></div>
+                    <div class="service-info">
+                        <h3 class="service-title">Strength Training</h3>
+                        <p class="service-description">Build functional strength and muscle through proven training methods that honor your body as a temple.</p>
                     </div>
                 </div>
 
-                <!-- The Hybrid Split Program -->
-                <div class="product-card fade-in">
-                    <div class="product-image">
-                        <img src="placeholder-program-2.jpg" alt="The Hybrid Split Program" style="width: 100%; height: 100%; object-fit: cover; display: none;">
-                        <div class="coaching-placeholder">The Hybrid Split Program</div>
+                <!-- Nutrition Coaching -->
+                <div class="service-card fade-in">
+                    <div class="service-image nutrition-image"></div>
+                    <div class="service-info">
+                        <h3 class="service-title">Nutrition Guidance</h3>
+                        <p class="service-description">Fuel your body with purpose through personalized nutrition plans that support your goals and values.</p>
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-title">The Hybrid Split</h3>
-                        <div class="product-price">
-                            <span class="sale-price">224,00 DKK</span>
-                            <span class="regular-price">275,00 DKK</span>
-                            <span class="sale-badge">Sale</span>
-                        </div>
-                        <a href="#" class="product-link">Learn More</a>
+                </div>
+
+                <!-- Mindset & Faith -->
+                <div class="service-card fade-in">
+                    <div class="service-image mindset-image"></div>
+                    <div class="service-info">
+                        <h3 class="service-title">Faith & Mindset</h3>
+                        <p class="service-description">Develop mental resilience and spiritual strength through faith-based coaching and mindset work.</p>
                     </div>
                 </div>
             </div>
@@ -537,43 +625,122 @@
     <section class="coaching" id="coaching">
         <div class="container">
             <div class="coaching-content">
-                <div class="coaching-image">
-                    <img src="http://harrodshustle.com/cdn/shop/files/IMG_17882_b9c13349-21d3-4a57-bfce-f3389b91f3e6.jpg?v=1733752133&width=1500" alt="1:1 Coaching" style="width: 100%; height: 100%; object-fit: cover; display: none;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="coaching-placeholder">1:1 Coaching Image Placeholder</div>
-                </div>
-                
-                <h2 class="fade-in">1:1 Coaching</h2>
+                <h2 class="fade-in">1:1 Personal Coaching</h2>
+                <div class="coaching-price fade-in">$250</div>
+                <p class="coaching-frequency fade-in">per month</p>
                 <p class="coaching-description fade-in">
-                    Take Your Fitness to New Heights with 1:1 Coaching!<br>
-                    Unlock a fully personalized experience designed to meet your unique goals:
+                    Experience complete transformation through personalized coaching that addresses your body, mind, and spirit. This isn't just about getting fit - it's about becoming the person God created you to be.
                 </p>
                 
                 <div class="coaching-features fade-in">
                     <div class="feature-item">
-                        <div class="feature-title">3 Monthly Check-Ins</div>
-                        <p>Strategize, plan, and refine your workout and nutrition approach to keep you progressing.</p>
+                        <div class="feature-title">Weekly Check-Ins</div>
+                        <p>Regular progress assessments and program adjustments to keep you on track.</p>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-title">Custom Workout & Nutrition Plan</div>
-                        <p>Every element is tailored to your lifestyle and fitness targets.</p>
+                        <div class="feature-title">Custom Training & Nutrition</div>
+                        <p>Personalized workout and meal plans tailored to your lifestyle and goals.</p>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-title">24/7 Support</div>
-                        <p>I'm here whenever you need guidance, motivation, or advice.</p>
+                        <div class="feature-title">Faith-Based Mindset Coaching</div>
+                        <p>Develop mental toughness through biblical principles and spiritual growth.</p>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-title">Accountability</div>
-                        <p>I'll track your progress and ensure you stay on course.</p>
+                        <div class="feature-title">24/7 Support & Accountability</div>
+                        <p>Direct access to me for questions, motivation, and accountability.</p>
                     </div>
                 </div>
                 
                 <p class="fade-in">
-                    <strong>Ready to get started?</strong><br>
-                    Limited spots available!<br>
-                    Book a no-obligation call to learn more here:
+                    <strong>Ready to transform your life?</strong><br>
+                    Limited spots available for serious individuals only.
                 </p>
                 
-                <a href="https://calendly.com/harrodshustle/30min" class="coaching-cta fade-in">BOOK CALL</a>
+                <div style="margin-top: 2rem;">
+                    <a href="https://calendly.com/harrodshustle/30min" class="cta-button fade-in">Book a Call</a>
+                    <a href="https://calendly.com/harrodshustle/30min" class="cta-button cta-secondary fade-in">Book Your Spot</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title fade-in">Client Transformations</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Coach Tuwan didn't just transform my body - he transformed my entire mindset. The faith-based approach helped me find purpose in my fitness journey. Down 35 pounds and stronger than ever!"</p>
+                    <div class="testimonial-author">Marcus Johnson</div>
+                    <div class="testimonial-title">Business Owner</div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"I was struggling with confidence and direction. Through Tuwan's coaching, I learned to see my body as a temple and my workouts as worship. The mental clarity I've gained is priceless."</p>
+                    <div class="testimonial-author">Sarah Williams</div>
+                    <div class="testimonial-title">Teacher & Mother</div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The accountability and spiritual foundation made all the difference. This isn't just about muscles - it's about becoming the man God called me to be. Best investment I've ever made."</p>
+                    <div class="testimonial-author">David Thompson</div>
+                    <div class="testimonial-title">Youth Pastor</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title fade-in">Frequently Asked Questions</h2>
+            <div class="faq-content">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>Do I need to be a Christian to work with you?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While my coaching is faith-based, I welcome clients from all backgrounds. The spiritual component focuses on finding purpose and meaning in your transformation journey.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>What if I'm a complete beginner?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Perfect! I specialize in meeting you exactly where you are. Every program is customized to your current fitness level and experience.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>How does the coaching work remotely?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Through weekly video calls, custom app-based programs, constant text support, and progress tracking. You'll feel like I'm right there with you.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>What's included in the monthly fee?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Everything you need: custom workout plans, nutrition guidance, weekly check-ins, 24/7 text support, mindset coaching, and spiritual growth sessions.</p>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>Is there a commitment period?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>I recommend a minimum 3-month commitment for real transformation, but we can discuss what works best for your situation during our initial call.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -583,12 +750,13 @@
         <div class="footer-content">
             <div class="footer-links">
                 <a href="#home">Home</a>
-                <a href="#products">Programs</a>
+                <a href="#services">Services</a>
                 <a href="#coaching">Coaching</a>
-                <a href="#contact">Contact</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#faq">FAQ</a>
             </div>
             <div class="copyright">
-                <p>&copy; 2024 Harrodshustle. All rights reserved.</p>
+                <p>&copy; 2024 Coach Tuwan King Payton. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -640,17 +808,28 @@
             observer.observe(el);
         });
 
-        // Parallax effect for hero section
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            if (hero) {
-                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
+        // FAQ Toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const toggle = this.querySelector('.faq-toggle');
+                
+                // Close all other FAQs
+                document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                    if (otherAnswer !== answer) {
+                        otherAnswer.classList.remove('active');
+                        otherAnswer.previousElementSibling.querySelector('.faq-toggle').classList.remove('active');
+                    }
+                });
+                
+                // Toggle current FAQ
+                answer.classList.toggle('active');
+                toggle.classList.toggle('active');
+            });
         });
 
-        // Product card hover effects
-        document.querySelectorAll('.product-card').forEach(card => {
+        // Service card hover effects
+        document.querySelectorAll('.service-card, .testimonial-card').forEach(card => {
             card.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-10px) scale(1.02)';
             });
@@ -661,7 +840,7 @@
         });
 
         // CTA button animations
-        document.querySelectorAll('.cta-button, .coaching-cta').forEach(button => {
+        document.querySelectorAll('.cta-button').forEach(button => {
             button.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-3px) scale(1.05)';
             });
@@ -671,7 +850,7 @@
             });
         });
 
-        // Mobile menu toggle (if needed)
+        // Mobile menu toggle
         const createMobileMenu = () => {
             const nav = document.querySelector('.nav-container');
             const navLinks = document.querySelector('.nav-links');
@@ -721,4 +900,3 @@
     </script>
 </body>
 </html>
-
